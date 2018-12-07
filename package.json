@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "emittery": "^0.4.1",
+    "iterall": "^1.2.2"
+  }
+}

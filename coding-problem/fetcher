@@ -1,0 +1,18 @@
+#!/usr/local/bin/bash
+
+for MSGID in $(glima scan +dailycodingproblem | grep Good | awk '{print $4}'); 
+  do echo "Fetching ... $MSGID"; 
+  FCONTENTS=$(glima show $MSGID); 
+  echo "Parsing company ..."
+  COMPANY=$(echo $FCONTENTS | perl -lane 'if (/asked by (.+?)\./){ print $1 }'); 
+  echo "$COMPANY ....";
+  echo "Parsing problem ...";
+  CONTENTS=$(echo $FCONTENTS | perl  -0777 -n -e 'if (m/asked by.+?\.(.*)Upgrade to premium/s){ print $1 }'); 
+  OUTF="${COMPANY}_${MSGID}.js";
+  if [! -f $OUTF];
+    echo "Writing $OUTF";
+    printf "/*\n\n" > "${OUTF}";
+    printf "$CONTENTS" | tr "\r" "\n" >> "${OUTF}"; 
+    printf "\n\n */" >> "${OUTF}";
+  fi
+done;

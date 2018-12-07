@@ -1,0 +1,25 @@
+dutch flag
+makechange
+reverse a linked list
+subset
+fibonacci
+smallest window
+knapsack
+matrix snake
+run length encoding
+stair climbing combinations
+find unique set sums equal n(like stair climb but with sets vs list/array)
+isomorphic strings
+permutations
+balanced brackets
+n balanced parenthesis
+quick sort
+distinct chars
+largest sum of non-adjacent chars
+Fisher–Yates shuffle
+longest increasing subsequence 
+min unique sum array
+minimum palindrome insertion
+Longest Common subsequence
+Min Heap
+Impliment stack with heap
