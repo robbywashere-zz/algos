@@ -1,4 +1,7 @@
 /*
+ *
+
+ STUDY
 
 
 A builder is looking to build a row of N houses that can be of K different
@@ -38,3 +41,4 @@ function * paintHouse(costs, house = 0, total = 0, excludeColor){
 }
 
 console.log(Math.min(...paintHouse(COSTS)));
+console.log(Math.min(...paintHouse([[1, 4, 6], [2, 100, 2], [3, 100, 4]])));

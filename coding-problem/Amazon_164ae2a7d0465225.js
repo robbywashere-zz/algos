@@ -22,3 +22,24 @@ assume the string to be decoded is valid.
 
 
 */
+
+function RLE(str){
+
+
+  if (str === '') return str;
+  let curr = str[0];
+  let count = 1;
+  let stack = ''
+  for (let char of str.slice(1)) {
+    if (char === curr) count++
+    else {
+      stack += count;
+      stack += curr
+      curr = char;
+      count = 1;
+    }
+  }
+  return stack += count + curr;
+}
+
+console.log(RLE('AAAABBBCCDAA'))

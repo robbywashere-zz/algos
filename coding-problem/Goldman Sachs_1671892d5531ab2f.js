@@ -22,3 +22,13 @@ over the pre-processing step.
 
 
 */
+
+let list = [1,2,3,4,5]
+
+function sum(a,b){
+  return this.slice(a,a-b).reduce((p,n)=>p+n,0)
+}
+
+Array.prototype.sum = sum;
+
+console.log(list.sum(1,3));

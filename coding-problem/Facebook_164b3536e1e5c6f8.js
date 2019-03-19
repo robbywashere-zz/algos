@@ -37,6 +37,19 @@ to the left), so we can trap 8 units of water.
 
 
 
+function cool_water() {
+
+
+
+
+
+}
+
+
+
+
+
+
 
 
 function findWater(arr) { 

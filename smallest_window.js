@@ -31,30 +31,34 @@ function win(str,pat) {
 
   [...pat].forEach(c=> patMap[c] = (patMap[c]||0)+1);
 
+
   let start = 0;
   let end = 0;
   let len = Infinity;
   let ans = "";
-  let counter = Object.entries(pMap).length;
+  let counter = Object.entries(patMap).length;
 
   while (end < str.length) {
-    if (patMap[str[i]]) {
-      patMap[str[i]]--;
-      if (patMap[str[i]] == 0) counter--;
+    if (patMap[str[end]]) {
+      patMap[str[end]]--;
+      if (patMap[str[end]] == 0) counter--;
     }
     end++;
 
-    while (counter == 0) {
+    console.log({ counter, end })
 
-      if (end-begin < len) {
-        len = end-begin
-        ans = str.slice()
+    while (counter === 0) {
+
+      if (end-start < len) {
+        len = end-start
+        ans = str.slice();
       
       }
     
     }
 
   }
+  return ans;
 }
 
-win(str,pat)
+console.log(win(str,pat))

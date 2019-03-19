@@ -12,6 +12,7 @@ function maxNonAdj(arr){
     let newExcl = Math.max(excl,incl);
     incl = excl + arr[i];
     excl = newExcl;
+    console.log({ incl, excl })
 
   }
 

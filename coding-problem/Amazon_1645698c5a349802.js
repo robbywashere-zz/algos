@@ -33,6 +33,21 @@ any number from a set of positive integers X? For example, if X = {1, 3, 5}, you
 
 could climb 1, 3, or 5 steps at a time.
 
-
-
 */
+
+
+function CTAL(N, stepsTaken = [], stepsLeft = []){
+
+  if (N === 0) {
+    console.log(stepsTaken);
+    return;
+  }
+  //if (N < 0) return stepsTaken;
+
+  for (let i = 0; i < stepsLeft.length; i++) {
+    if (N - stepsLeft[i] >= 0) CTAL(N-stepsLeft[i],[ ...stepsTaken, stepsLeft[i]])
+  }
+
+}
+
+CTAL(4,[1,2])

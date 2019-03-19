@@ -12,10 +12,10 @@ function parens(str, left, right){
     parens(str + ")", left, right - 1);
   }
 
-
 }
 
 
-const n = 10;
 
-parens("", n/2,n/2);
+const n =  parseInt(process.argv[2]);
+
+parens("", n/2,n/2)

@@ -1,7 +1,9 @@
 /*
 
 
+https://www.geeksforgeeks.org/find-the-element-that-appears-once-in-a-sorted-array/
 
+https://www.geeksforgeeks.org/find-the-element-that-appears-once/
 
 Given an array of integers where every integer occurs three times except for one
 
@@ -20,3 +22,7 @@ Do this in O(N) time and O(1) space.
 
 
 */
+
+const LIST = [6, 1, 3, 3, 3, 6, 6];
+
+

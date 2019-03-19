@@ -40,3 +40,28 @@ one is lexicographically smaller.
 
 
 */
+
+
+let FLIGHTS = [['A', 'B'], ['A', 'C'], ['B', 'C'], ['C', 'A']].sort(([x,a],[_,b])=>a>b);
+console.log(FLIGHTS)
+
+
+function graph(flights){
+  let flmap = {};
+  for (let flight of flights) {
+    const [a, b] = flight;
+    if (!(a in flmap)) flmap[a] = [];
+    flmap[a].push(b);
+  }
+  return flmap;
+}
+
+function traverse(g, key,result = []){
+  result.push(key);
+  if (g[key] === undefined || !g[key].length) return result;
+  let n = g[key].shift();
+  return traverse(g, n,result);
+  
+}
+
+console.log(traverse(graph(FLIGHTS),'A'))

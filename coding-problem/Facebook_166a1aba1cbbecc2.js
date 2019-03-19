@@ -12,3 +12,10 @@ a copy of the list. How many swap or move operations do you need?
 
 
 */
+
+function rotate(list, k){
+  while(k--) list.push(list.shift())
+  return list;
+}
+
+console.log(rotate([1, 2, 3, 4, 5, 6], 0))

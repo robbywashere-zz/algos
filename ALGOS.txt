@@ -23,3 +23,5 @@ minimum palindrome insertion
 Longest Common subsequence
 Min Heap
 Impliment stack with heap
+Kadanes algorithm
+

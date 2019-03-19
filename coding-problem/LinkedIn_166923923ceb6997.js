@@ -23,6 +23,7 @@ kinds of numbers:
 
 And here are examples of non-numbers:
 
+-?[1-9]+e?[1-9]+?
 
 
  * "a"

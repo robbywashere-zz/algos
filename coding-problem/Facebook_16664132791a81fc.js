@@ -43,10 +43,11 @@ function reverse_delim(str){
 
 function reverse_delim2(str){
 
-  const words = str.split(/[:\/]+/);
+  const words = str.split(/[^\w]+/);
 
   const tokens = str.split(/\w+/);
 
+  console.log({ words, tokens })
   const result = [];
 
   while (words.length > 0 || tokens.length > 0) {
@@ -64,7 +65,7 @@ function reverse_delim2(str){
   return result.join('');
 }
 
-console.log(reverse_delim2('hello/world:here/'))
+console.log(reverse_delim2('?hello.dumb!world.here'))
 
 
 

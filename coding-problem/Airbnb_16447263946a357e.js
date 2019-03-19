@@ -20,3 +20,20 @@ Follow-up: Can you do this in O(N) time and constant space?
 
 
 */
+
+
+function nonAdjSum(list){
+
+  let adj = 0;
+  let nonAdj = 0;
+
+  for (let i = 0; i < list.length; i++){
+
+    if (list[i]+)
+
+  
+  }
+
+}
+
+console.log(nonAdjSum([2, 4, 6, 2, 5]));

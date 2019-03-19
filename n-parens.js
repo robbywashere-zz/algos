@@ -18,4 +18,4 @@ function parentheses(n) {
   paren(n / 2, n / 2, '');
 }
 
-parentheses(6);
+parentheses(120);
