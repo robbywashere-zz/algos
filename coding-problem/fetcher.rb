@@ -2,7 +2,7 @@
 #
 
 def write_code_file(company, msgid, content)
-  filename = "#{company}_#{msgid}.js"
+  filename = "#{company}_#{msgid}.js".gsub(' ','_')
   puts "Writing #{filename}"
   File.open(filename, 'w') { |file| 
     file.write("/*\n#{content.gsub(/\r/,"\n")}*/")
