@@ -17,6 +17,7 @@ to a 0 in the prefix, while descending right corresponds to 1.
 
 
 
+
 Here is an example tree (note that only the leaf nodes have letters):
 
 
